@@ -114,7 +114,7 @@ struct PokedexHomeView: View {
             }
             .listStyle(PlainListStyle())
             .overlay { if isLoading { ProgressView("Chargement…") } }
-            .searchable(text: $searchText, prompt: "Rechercher un Pokémon")
+            .searchable(text: $searchText, prompt: "Rechercher un Pokémon sur cette page")
             .onChange(of: selectedGen) { _ in fetchGeneration(selectedGen) }
             .onAppear { fetchGeneration(selectedGen) }
         }
